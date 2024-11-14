@@ -1,0 +1,6 @@
+<form method="POST" action="/import/">
+    {% csrf_token %}  <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    <input type="text" name="user_playlist_url" placeholder="Enter your playlist URL">
+    <input type="text" name="friend_playlist_url" placeholder="Enter your friend's playlist URL">
+    <button type="submit">Compare Playlists</button>
+</form>

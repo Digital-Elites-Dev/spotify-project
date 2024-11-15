@@ -26,7 +26,9 @@ urlpatterns = [
     path('compare/', views.compare_playlists, name='compare_playlists'),  # Display comparison results
     path('import_single_playlist/', views.import_single_playlist, name='import_single_playlist'),  # API for single playlist import
     # path('music/redirect', views.spotify_redirect, name='spotify_redirect'),  # New route for handling redirect
-    # path('create_playlist/', views.create_playlist, name='create_playlist'),  # Create a new playlist
+    path('create_playlist/', views.create_playlist, name='create_playlist'),  # Create a new playlist
+    path('music/redirect', views.spotify_redirect, name='spotify_redirect'),  # Add this line
+    # path('user/playlists/', views.get_user_playlists, name='get_user_playlists'),
 
 
     # path('report/', views.get_playlist_data_by_id, name='get_playlist_data_by_id'),  # Display report

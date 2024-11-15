@@ -19,7 +19,7 @@ class Track(models.Model):
     key = models.IntegerField(null=True)
     
     tempo = models.FloatField(null=True)
-    danceability = models.FloatField()  # Add this field if it doesn't exist
+    danceability = models.FloatField(null=True, blank=True)  # This allows null values for tracks without danceability info
 
     # class Meta:
     #     unique_together = ['spotify_id', 'playlist']  # Ensure spotify_id is unique per playlist
